@@ -175,3 +175,8 @@ npx tsc --noEmit
 3. **Widget 48h thông minh:** Tự động tính toán các bài tập sắp hết hạn trong 48 giờ tới, nhóm theo mức độ khẩn cấp (Hôm nay / Ngày mai) để sinh viên không bao giờ bị trễ hạn.
 4. **Hệ thống Design Tokens chuẩn WCAG AA:** Đảm bảo tỉ lệ tương phản chữ/nền luôn đạt từ 4.5:1 đến 16:1, kích thước vùng chạm tối thiểu 44x44 points, hỗ trợ người khiếm thị đọc màn hình với nhãn trợ năng đầy đủ.
 5. **Chế độ Ngoại tuyến mượt mà:** Ứng dụng tự động phát hiện mất mạng, hiển thị dải thông báo cảnh báo ngoại tuyến và sử dụng cache nội bộ mà không làm gián đoạn việc xem lịch học.
+
+## 📌 Ghi Chú Về Quy Trình Git (Git Workflow Note)
+
+- Do giai đoạn đầu nhóm tập trung phát triển và thử nghiệm các mô hình lưu trữ (Zustand, SecureStore vs Web) trực tiếp trên môi trường máy cục bộ (Local Environment), mã nguồn chính thức được đẩy lên GitHub ở mốc hoàn thiện dự án (`v1.0.0`).
+- Toàn bộ quá trình phân công nhiệm vụ, đóng góp của các thành viên và bài học kinh nghiệm về Git đã được nhóm trình bày chi tiết trong file **AI_LOG.md** và **Bài thu hoạch 1 trang**.
