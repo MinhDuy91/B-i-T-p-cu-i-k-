@@ -4,9 +4,9 @@
 > **Đề tài:** Topic 01 — Study Planner (Quản lý Lịch học & Deadline Sinh viên)  
 > **Nhóm sinh viên thực hiện:**
 >
-> - **1923050269 - Nguyễn Minh Hiếu**
-> - **1923050154 - Nguyễn Duy Hiếu**
-> - **1923050091 - Vũ Thanh Minh Duy**
+> - **1923050269 - Nguyễn Minh Hiếu (Trưởng Nhóm)**
+> - **1923050154 - Nguyễn Duy Hiếu (Thành viên)**
+> - **1923050091 - Vũ Thanh Minh Duy (Thành viên)**
 
 ---
 
@@ -135,11 +135,11 @@ _Mọi dòng mã do AI sinh ra đều phải được sinh viên đọc hiểu, 
 
 ## 4. Phân Công & Đánh Giá Đóng Góp Giữa Các Thành Viên
 
-|      MSSV      |   Họ tên    | Nhiệm vụ chính trong dự án                                                                                                 | Mức độ đóng góp |
-| :------------: | :---------: | :------------------------------------------------------------------------------------------------------------------------- | :-------------: |
-| **1923050269** | Trưởng nhóm | Prompt và giám sát kiến trúc UI, kiểm duyệt toàn bộ Design Tokens WCAG, hoàn thiện các màn hình Dashboard, Calendar, Modal |    **100%**     |
-| **1923050154** | Thành viên  | Quản lý state Zustand, tích hợp TanStack Query, xử lý SecureStore, tích hợp Camera/Image Picker và Notification            |    **100%**     |
-| **1923050091** | Thành viên  | Thiết kế Mock API, cấu hình Jest & viết 4 test suites (22 tests), rà soát và fix các lỗi múi giờ và TypeScript             |    **100%**     |
+|      MSSV      |             Họ tên             | Nhiệm vụ chính trong dự án                                                                                                 | Mức độ đóng góp |
+| :------------: | :----------------------------: | :------------------------------------------------------------------------------------------------------------------------- | :-------------: |
+| **1923050269** | Nguyễn Minh Hiếu (Trưởng nhóm) | Prompt và giám sát kiến trúc UI, kiểm duyệt toàn bộ Design Tokens WCAG, hoàn thiện các màn hình Dashboard, Calendar, Modal |    **100%**     |
+| **1923050154** |  Nguyễn Duy Hiếu (Thành viên)  | Quản lý state Zustand, tích hợp TanStack Query, xử lý SecureStore, tích hợp Camera/Image Picker và Notification            |    **100%**     |
+| **1923050091** | Vũ Thanh Minh Duy (Thành viên) | Thiết kế Mock API, cấu hình Jest & viết 4 test suites (22 tests), rà soát và fix các lỗi múi giờ và TypeScript             |    **100%**     |
 
 ---
 

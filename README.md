@@ -2,39 +2,39 @@
 
 > **Đồ án Cuối kỳ — Chuyên đề Lập trình Thiết bị Di động (Mobile Programming)**  
 > **Topic 01:** Study Planner (Lịch học & Quản lý Deadline thông minh)  
-> **Đối tượng:** Sinh viên năm 4 — Khoa Công nghệ Thông tin  
+> **Đối tượng:** Sinh viên năm 4 — Khoa Công nghệ Thông tin
 
 ---
 
 ## 👥 Nhóm Sinh viên Thực hiện
 
-| STT | Mã số Sinh viên (MSSV) | Họ và Tên | Vai trò & Phân công nhiệm vụ |
-| :---: | :---: | :---: | :--- |
-| **1** | **1923050269** | Trưởng nhóm | Thiết kế UI/UX Tokens, Xây dựng hệ thống màn hình (Screens), Tối ưu Accessibility (WCAG AA), Kiểm thử trải nghiệm |
-| **2** | **1923050154** | Thành viên | Kiến trúc Quản lý trạng thái (Zustand), TanStack Query Cache, Xác thực bảo mật SecureStore, Xử lý ảnh đính kèm & Thông báo |
-| **3** | **1923050091** | Thành viên | Thiết kế Mock API & Xử lý ngoại tuyến (Offline), Viết Automated Tests (Jest 22 tests), Kiểm thử Timezone & Build app |
+|  STT  | Mã số Sinh viên (MSSV) |           Họ và Tên            | Vai trò & Phân công nhiệm vụ                                                                                               |
+| :---: | :--------------------: | :----------------------------: | :------------------------------------------------------------------------------------------------------------------------- |
+| **1** |     **1923050269**     | Nguyễn Minh Hiếu (Trưởng Nhóm) | Thiết kế UI/UX Tokens, Xây dựng hệ thống màn hình (Screens), Tối ưu Accessibility (WCAG AA), Kiểm thử trải nghiệm          |
+| **2** |     **1923050154**     |  Nguyễn Duy Hiếu (Thành viên)  | Kiến trúc Quản lý trạng thái (Zustand), TanStack Query Cache, Xác thực bảo mật SecureStore, Xử lý ảnh đính kèm & Thông báo |
+| **3** |     **1923050091**     | Vũ Thanh Minh Duy (Thành viên) | Thiết kế Mock API & Xử lý ngoại tuyến (Offline), Viết Automated Tests (Jest 22 tests), Kiểm thử Timezone & Build app       |
 
 ---
 
 ## 🎯 Bảng Đối chiếu Tính năng & Thang điểm Đánh giá
 
-| Phân loại | Tính năng yêu cầu | Trạng thái | Vị trí Source Code / Chi tiết kỹ thuật |
-| :--- | :--- | :---: | :--- |
-| **Must Have** | Đăng nhập / Đăng xuất an toàn, lưu phiên | ✅ Đạt | `store/authStore.ts`, `app/sign-in.tsx`, dùng `expo-secure-store` |
-| **Must Have** | CRUD Môn học & Bài tập từ API | ✅ Đạt | `api/client.ts`, `api/courses.ts`, `api/assignments.ts` |
-| **Must Have** | 2 Chế độ xem Lịch (Tuần & Danh sách) | ✅ Đạt | `app/(tabs)/calendar.tsx`, `components/WeeklyCalendar.tsx` |
-| **Must Have** | Lọc theo môn học và trạng thái | ✅ Đạt | Lọc 'all' / 'pending' / 'completed' kết hợp môn học trong `calendar.tsx` |
-| **Must Have** | Nhắc nhở hạn nộp thông báo cục bộ | ✅ Đạt | `utils/notifications.ts` (lên lịch nhắc trước 24h & 2h) |
-| **Must Have** | Thống kê tiến độ theo môn (Computed) | ✅ Đạt | `app/(tabs)/courses.tsx`, `components/CourseCard.tsx` (tính động) |
-| **Must Have** | Hỗ trợ Ngoại tuyến & Offline Banner | ✅ Đạt | `hooks/useNetworkStatus.ts`, `components/ui/OfflineBanner.tsx` |
-| **Should Have (>8đ)** | Đính kèm ảnh chụp ghi chú bài tập | ✅ Đạt | `app/modal/new-assignment.tsx`, `app/assignment/[id].tsx` (Camera & Library) |
-| **Should Have (>8đ)** | Widget tóm tắt deadline 48 giờ | ✅ Đạt | `components/WidgetSummary.tsx` hiển thị ngay đầu màn hình Trang chủ |
-| **Should Have (>8đ)** | Optimistic updates kèm rollback | ✅ Đạt | `api/assignments.ts` và `app/assignment/[id].tsx` khi hoàn thành bài |
-| **Tiêu chuẩn UI** | 4 Trạng thái (Loading, Empty, Error, Content) | ✅ Đạt | Đầy đủ tại 100% các màn hình (`components/ui/*`) |
-| **Tiêu chuẩn UI** | Dark & Light Mode từ 1 file token duy nhất | ✅ Đạt | `constants/tokens.ts` (đảm bảo độ tương phản chữ/nền >= 4.5:1) |
-| **Tiêu chuẩn UI** | Accessibility WCAG (Target >= 44x44, label, role) | ✅ Đạt | Áp dụng `minTouchSize: 44`, `hitSlop`, `accessibilityRole`, `accessibilityLabel` |
-| **Kiến trúc** | Cấu trúc định tuyến Expo Router (5+ màn hình) | ✅ Đạt | 1 Dynamic Route (`[id]`), 1 Modal Route (`modal/new-assignment`), 4 Tabs, `+not-found` |
-| **Kiểm thử** | Kiểm thử tự động (Tối thiểu 3 tests) | ✅ Đạt | **4 test suites, 22 unit tests** chạy với Jest & `@react-native/jest-preset` |
+| Phân loại             | Tính năng yêu cầu                                 | Trạng thái | Vị trí Source Code / Chi tiết kỹ thuật                                                 |
+| :-------------------- | :------------------------------------------------ | :--------: | :------------------------------------------------------------------------------------- |
+| **Must Have**         | Đăng nhập / Đăng xuất an toàn, lưu phiên          |   ✅ Đạt   | `store/authStore.ts`, `app/sign-in.tsx`, dùng `expo-secure-store`                      |
+| **Must Have**         | CRUD Môn học & Bài tập từ API                     |   ✅ Đạt   | `api/client.ts`, `api/courses.ts`, `api/assignments.ts`                                |
+| **Must Have**         | 2 Chế độ xem Lịch (Tuần & Danh sách)              |   ✅ Đạt   | `app/(tabs)/calendar.tsx`, `components/WeeklyCalendar.tsx`                             |
+| **Must Have**         | Lọc theo môn học và trạng thái                    |   ✅ Đạt   | Lọc 'all' / 'pending' / 'completed' kết hợp môn học trong `calendar.tsx`               |
+| **Must Have**         | Nhắc nhở hạn nộp thông báo cục bộ                 |   ✅ Đạt   | `utils/notifications.ts` (lên lịch nhắc trước 24h & 2h)                                |
+| **Must Have**         | Thống kê tiến độ theo môn (Computed)              |   ✅ Đạt   | `app/(tabs)/courses.tsx`, `components/CourseCard.tsx` (tính động)                      |
+| **Must Have**         | Hỗ trợ Ngoại tuyến & Offline Banner               |   ✅ Đạt   | `hooks/useNetworkStatus.ts`, `components/ui/OfflineBanner.tsx`                         |
+| **Should Have (>8đ)** | Đính kèm ảnh chụp ghi chú bài tập                 |   ✅ Đạt   | `app/modal/new-assignment.tsx`, `app/assignment/[id].tsx` (Camera & Library)           |
+| **Should Have (>8đ)** | Widget tóm tắt deadline 48 giờ                    |   ✅ Đạt   | `components/WidgetSummary.tsx` hiển thị ngay đầu màn hình Trang chủ                    |
+| **Should Have (>8đ)** | Optimistic updates kèm rollback                   |   ✅ Đạt   | `api/assignments.ts` và `app/assignment/[id].tsx` khi hoàn thành bài                   |
+| **Tiêu chuẩn UI**     | 4 Trạng thái (Loading, Empty, Error, Content)     |   ✅ Đạt   | Đầy đủ tại 100% các màn hình (`components/ui/*`)                                       |
+| **Tiêu chuẩn UI**     | Dark & Light Mode từ 1 file token duy nhất        |   ✅ Đạt   | `constants/tokens.ts` (đảm bảo độ tương phản chữ/nền >= 4.5:1)                         |
+| **Tiêu chuẩn UI**     | Accessibility WCAG (Target >= 44x44, label, role) |   ✅ Đạt   | Áp dụng `minTouchSize: 44`, `hitSlop`, `accessibilityRole`, `accessibilityLabel`       |
+| **Kiến trúc**         | Cấu trúc định tuyến Expo Router (5+ màn hình)     |   ✅ Đạt   | 1 Dynamic Route (`[id]`), 1 Modal Route (`modal/new-assignment`), 4 Tabs, `+not-found` |
+| **Kiểm thử**          | Kiểm thử tự động (Tối thiểu 3 tests)              |   ✅ Đạt   | **4 test suites, 22 unit tests** chạy với Jest & `@react-native/jest-preset`           |
 
 ---
 
@@ -113,30 +113,39 @@
 ## 🚀 Hướng dẫn Cài đặt & Chạy Ứng dụng
 
 ### 1. Yêu cầu Môi trường
+
 - Node.js >= 18.x
 - Trình quản lý gói npm hoặc yarn
 - Ứng dụng **Expo Go** trên điện thoại (iOS / Android) hoặc giả lập Android Studio / Xcode Simulator.
 
 ### 2. Cài đặt Thư viện
+
 Mở terminal tại thư mục dự án (`file cuối kỳ`):
+
 ```bash
 npm install
 ```
 
 ### 3. Chạy Ứng dụng (Development)
+
 ```bash
 npx expo start
 ```
+
 - Quét mã QR hiển thị trên Terminal bằng **Expo Go** (Android) hoặc Camera (iOS).
 - Nhấn `w` để mở giao diện Web.
 - Nhấn `a` để chạy trên Android Emulator.
 
 ### 4. Chạy Kiểm thử Tự động (Automated Tests)
+
 Toàn bộ 4 bộ test suites (22 tests) được chạy bằng Jest:
+
 ```bash
 npm test
 ```
-*Kết quả mẫu:*
+
+_Kết quả mẫu:_
+
 ```text
 PASS __tests__/progress.test.ts
 PASS __tests__/appStore.test.ts
@@ -150,14 +159,16 @@ Time:        2.953 s
 ```
 
 ### 5. Kiểm tra TypeScript (Type Check)
+
 Đảm bảo 100% không có lỗi kiểu dữ liệu:
+
 ```bash
 npx tsc --noEmit
 ```
 
 ---
 
-## 🌟 Điểm Nổi Bật của Dự án (> 8.0 Điểm)
+## 🌟 Điểm Nổi Bật của Dự án
 
 1. **Optimistic Updates với Rollback tự động:** Khi người dùng nhấn hoàn thành bài tập, giao diện lập tức cập nhật và gạch bỏ bài tập ngay tức thì (0ms latency). Nếu API giả lập trả về lỗi, TanStack Query sẽ tự động rollback trạng thái về trước đó và thông báo lỗi.
 2. **Đính kèm Ảnh ghi chú (Handwritten Notes):** Cho phép chụp trực tiếp từ camera hoặc chọn từ thư viện ảnh để lưu lại ảnh chụp đề cương, slide giảng viên hoặc bản nháp viết tay của bài tập.
